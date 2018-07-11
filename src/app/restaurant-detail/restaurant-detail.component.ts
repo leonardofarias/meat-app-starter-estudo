@@ -16,6 +16,7 @@ export class RestaurantDetailComponent implements OnInit {
 
   ngOnInit() {
       //pegar os parâmetros da rota subscribe ou snapshot
+      //teste 
       this.restaurantsService.restaurantById(this.route.snapshot.params['id'])
         .subscribe(restaurant => this.restaurant = restaurant)
   }
