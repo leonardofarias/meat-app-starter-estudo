@@ -1,6 +1,6 @@
 import { CartItem } from "./cart-item.model";
 import { MenuItem } from "../menu-item/menu-item.model";
-import { PreActivation } from "../../../../node_modules/@angular/router/src/router";
+import { PreActivation } from "@angular/router/src/router";
 
 export class ShoppingCartService {
     
