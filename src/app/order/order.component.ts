@@ -5,6 +5,7 @@ import { ThrowStmt } from '../../../node_modules/@angular/compiler/src/output/ou
 import { CartItem } from '../restaurant-detail/shopping-cart/cart-item.model';
 import { shimContentAttribute } from '../../../node_modules/@angular/platform-browser/src/dom/dom_renderer';
 import { Order, OrdemItem } from './order.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mt-order',
@@ -19,7 +20,8 @@ export class OrderComponent implements OnInit {
     {label: 'Cartão de Débito', value: 'DEB'},
     {label: 'Cartão Refeição', value: 'REF'},
   ]
-  constructor(private orderService: OrderService) { }
+  constructor(private orderService: OrderService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -48,9 +50,10 @@ export class OrderComponent implements OnInit {
     order.orderItems = this.cartItems()
     .map((item:CartItem)=> new OrdemItem(item.quantity, item.menuItem.id))
     this.orderService.checkOrder(order)
-    .subscribe((orderId: string) => { console.log(`Compra concluída: ${orderId}`)})
+    .subscribe((orderId: string) => { 
+      this.router.navigate(['order-summary'])
+    })
     this.orderService.clear()
-    console.log(order)
   }
 
 }
