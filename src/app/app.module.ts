@@ -17,8 +17,6 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { Sharedmodule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
-
 
 @NgModule({
   declarations: [
@@ -37,8 +35,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     HttpModule,
-    Sharedmodule,
-    CoreModule,
+    Sharedmodule.forRoot(),
     RouterModule.forRoot(ROUTES)
   ],
   // LOCALE_ID está com versão estendida por exemplo {provide: RestaurantService, useClass:'RestaurantsService'}
