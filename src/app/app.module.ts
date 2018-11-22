@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import {ROUTES} from './app.routes'
 
@@ -36,7 +36,7 @@ import { Sharedmodule } from './shared/shared.module';
     BrowserModule,
     HttpModule,
     Sharedmodule.forRoot(),
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
   // LOCALE_ID está com versão estendida por exemplo {provide: RestaurantService, useClass:'RestaurantsService'}
   providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
