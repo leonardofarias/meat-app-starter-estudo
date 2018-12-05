@@ -40,6 +40,8 @@ Expressões regulares usadas na validação de formulários
 
 ## a utilização da hash # significa que o conteúdo após o hash só vai ser lido pelo client e não pelo server
 
+## base href não alterar na index, da pra fazer direto na linha de comando 'ng build --prod --bh=/meat/'
+
 ## Upgrade para Angular 4.3
 
 Dependências dos pacotes que devem ficar em package.json:
