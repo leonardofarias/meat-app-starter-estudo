@@ -42,6 +42,10 @@ Expressões regulares usadas na validação de formulários
 
 ## base href não alterar na index, da pra fazer direto na linha de comando 'ng build --prod --bh=/meat/'
 
+## route guard canLoad para módulos lazyload bloqueando ou não seu carregamento
+
+## route guard canActivate quando o módulo carregou e o usuário tenta voltar após ter deslogado
+
 ## Upgrade para Angular 4.3
 
 Dependências dos pacotes que devem ficar em package.json:
