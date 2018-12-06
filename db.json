@@ -506,6 +506,22 @@
         }
       ],
       "id": 9
+    },
+    {
+      "name": "Leonardo",
+      "email": "leonardofarias@gmail.com",
+      "emailConfirmation": "leonardofarias@gmail.com",
+      "address": "Rua teste",
+      "number": "234",
+      "optionalAddress": "teste",
+      "paymentOption": "DEB",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "sunday"
+        }
+      ],
+      "id": 10
     }
   ]
 }
