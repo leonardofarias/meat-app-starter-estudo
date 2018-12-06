@@ -4,7 +4,7 @@ export class User {
                 private password: string){}
 
     matches(another: User):boolean {
-        return another !== undefined 
+        return another !== undefined &&
         another.email === this.email && another.password === this.password
     }
     

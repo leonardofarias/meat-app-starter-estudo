@@ -7,8 +7,8 @@ var User = /** @class */ (function () {
         this.password = password;
     }
     User.prototype.matches = function (another) {
-        return another !== undefined;
-        another.email === this.email && another.password === this.password;
+        return another !== undefined &&
+            another.email === this.email && another.password === this.password;
     };
     return User;
 }());
